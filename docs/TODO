@@ -1,11 +1,14 @@
 TODO
 
-# Hypergraphs
+# hypergraph
 
 * coarsen
 * hweights
 
-# Partition
+# partition
 
 * coarsen
 
+# analysis/plot
+
+* plot the border
