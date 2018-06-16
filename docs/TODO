@@ -24,3 +24,5 @@ TODO
 # operators
 
 * order: degree, nwgts_priority
+* restrictions: part
+* matching: balance, big_with_small
