@@ -20,3 +20,7 @@ TODO
 * vn_best_part: check k-partitioning...
 * fm: gain table for k-partitioning
       gain table for imbalance
+
+# operators
+
+* order: degree, nwgts_priority
