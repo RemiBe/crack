@@ -12,3 +12,7 @@ TODO
 # analysis/plot
 
 * plot the border
+
+# algos
+
+* direct partitioning with MeTiS, Mondriaan, PaToH, Scotch, Zoltan...
