@@ -1,0 +1,17 @@
+INSTALL
+
+1. Download crack:
+   $ cd [dir_for_crack]
+   $ git clone git@github.com:RemiBe/Crack.git
+
+2. Add [dir_for_crack] to a .pth file
+   in $HOME/.local/lib/python[your_python_version]/site-packages/[filename].pth
+   (create the directories if they do not exist, any filename works).
+
+   NB: Crack is implemented in Python 3.
+
+3. Test it!
+   $ cd [dir_for_crack]/crack/main
+   $ python crack_part.py examples/mushroom.yaml
+   Which just initializes a mesh.
+

@@ -1,0 +1,74 @@
+Author: Remi Barat
+Last update: 08/01/2018
+
+
+# Introduction: What is Crack?
+
+Crack is a graph partitioning framework. Graph partitioning is an
+NP-Hard problem which has numerous applications. Basically, given
+a graph whose vertices and edges are weighted, we search for a
+partition that
+- balances the weights of the parts and
+- minimizes the sum of the weights of the edges cut by the partition.
+Applications of this problem include partitioning electronic
+components on a chip for VLSI circuit design, or load balancing of
+numerical simulation.
+
+Crack aims at providing to those interested in designing graph
+partitioning heuristics a means to easily:
+- Implement new heuristics
+- Study the behavior of a heuristic, through:
+    - The possibility to print data throughout the algorithm execution
+    - The possibility to plot partitions obtained at different steps
+      of the algorithm
+- Benchmark heuristics
+    - Algorithms only need to be specified, Crack runs them
+    - Various analysis can be performed on the data
+
+Crack prioritizes:
+1. Flexibility
+2. Simplicity
+3. Efficiency
+
+For those who want to play with graphs and discover graph partitioning:
+- Pictures are provided in the crack/example/images/ folder
+- A list of references can be found in the crack/docs/refs.txt file
+- A list of ideas that may be worth tested can be found in the
+  crack/docs/ideas.txt file
+If your discoveries are worth it, try publishing them in a conference or
+a scientific paper, and don't forget to cite Crack while doing it!
+
+Now it is time to jump to the crack/docs/dev_guide.txt file to
+understand how to use Crack and implement new algorithms!
+
+# FAQ
+
+1. Why the name Crack?
+
+Crack is like a split, so it suits a graph partitioning tool.
+Moreover, to have a crack means to try, which is why you may
+use Crack (because more efficient partitioning tools exists!):
+to design your own algorithms.
+
+2. What will I gain from contributing?
+
+Graph partitioning is a fascinating and complex problem, with
+numerous applications. Addressing this problem alone leads to
+the current state: a few people design algorithms, have a lot
+of ideas but little time to investigate them. With Crack, anyone
+can investigate ideas from everyone, thus helping everyone to
+gain knowledge on how a graph partitioning tool should behave.
+
+So, what you can gain from participating is:
+* fame and acknowledgements from your peers
+* valuable knowledge on heuristics that address an NP-Hard problem
+* practise your Python skills on a real and challenging problem
+* get contacts from other people (and at least, me =)
+  by discussing each other ideas and results.
+
+3. How can I contribute?
+
+Read the docs/TODO, implement your own ideas, spread the word
+about Crack, or send me an email at remibarat@yahoo.fr.
+
+

@@ -1,0 +1,20 @@
+usage
+
+
+# Creating a model
+
+* Meshes
+  * from a .mesh
+  * from a .mtx
+
+# Partitioning a model
+
+* using an algorithm
+* direct algorithms
+* iterative algorithms
+* multilevel algorithm
+
+# Plotting a model
+
+# Launching a benchmark and analysing the results
+

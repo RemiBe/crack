@@ -1,0 +1,57 @@
+ideas
+
+# Initial partitioning
+
+* start from a balanced partition for one criterion before calling
+  vn_first/vn_best, stopping when the constraints are respected.
+
+# Kernighan-Lin Algorithm (KL)
+
+Despite being characterized as improved by the Fiduccia-Mattheyses
+algorithm, these two algorithms are in fact different. The only
+partitoning tool implementing KL is PaToH, but it is worth studying
+whether KL can effectively help escape tight balance constraints.
+
+NB: PaToH does not consider all pairs of nodes, but only the nodes
+    at the border.
+    Possible policy: select a node of best gain. If moving it does
+    not respect the balance constraints, select a node in the other
+    part and not a neighbor, to try an exchange.
+
+# Multilevel
+
+* Is there a correlation between the cut at the coarsest level and the
+  final cut? Several (unpublished, so you need to take my word for it)
+  studies have observed that usually, there is a correlation between
+  two successive levels, but that this correlation decreases gradually
+  when the level difference increases, and finally becomes very small.
+* Relax the tolerance (and rebalancing algorithm)
+* Coarsening phase:
+  * Determine the right coarsening threshold (currently: 100), but
+    maybe we can stop before (if we are sure that it will be difficult
+    to find solutions with fewer vertices/heavier weights) or continue
+    further.
+  * Better to use the edge weights or start with unit weights?
+* Initial partitioning phase:
+  * It is important depending on the tolerance. When the tolerance
+    is not that tight, the refinement algorithm can find
+  * Real multi-criteria initial partitioning algorithm, considering
+    both the topology AND the weights to reach a `good' partition.
+    The current GGG may be improved easily.
+* Refinement phase:
+  * Build a path of nodes instead of moving one by one
+  * Try different policies for FM: first, worst, random...
+
+
+# Implem
+
+* Imbalances
+  * Support the fact that two parts/two criteria can be the most
+    imbalanced at the same time.
+
+# Other challenges:
+
+* Repartitioning
+* Parallel partitioning
+* Ghost cells
+
