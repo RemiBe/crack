@@ -11,9 +11,9 @@ from crack.models.graph           import coarsen_Graph
 from crack.models.hypergraph      import coarsen_Hypergraph
 from crack.models.mesh            import coarsen_Mesh
 from crack.models.eweights        import coarsen_EWeights
-from crack.models.hweights        import coarsen_HWeights
+#from crack.models.hweights        import coarsen_HWeights
 from crack.models.nweights        import coarsen_NWeights
-from crack.models.partition       import coarsen_Partition
+#from crack.models.partition       import coarsen_Partition
 from crack.operators.aggregate    import AGGREGATE_FCTS
 from crack.operators.order        import get_order
 from crack.operators.restrictions import get_restrict_fct
@@ -34,7 +34,7 @@ def coarsen_models(models, records, aggregation):
 #        "partition" : coarsen_Partition,
         "nweights"  : coarsen_NWeights,
         "eweights"  : coarsen_EWeights,
-        "hweights"  : coarsen_HWeights,
+#        "hweights"  : coarsen_HWeights,
     }
     entities = [ # need to coarsen the topologies before the weights...
         "mesh", "graph", "hypergraph",

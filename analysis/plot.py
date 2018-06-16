@@ -5,11 +5,12 @@ using different colors for each part.
 __author__ = "Rémi Barat"
 __version__ = "1.0"
 
+
 import math
 import svgwrite as svgw
 from   time import time
 
-from crack.analysis.colors  import COLOR_DISTINCT, COLOR_BASE, COLOR_BLIND
+from crack.analysis.colors  import COLOR_DISTINCT, COLOR_DEFAULT, COLOR_BLIND
 from crack.models.geom_fcts import homothetic, translate, dist_d2
 from crack.models.topo_fcts import min_dist_nodes
 from crack.utils.errors     import crack_error
@@ -163,7 +164,7 @@ def _compute_node_colors(models, algopt, nbr_n):
                 values = _model_to_values(models[model_key])
                 color_attr[color_key] = _compute_colors_continuous(values)
     if color_attr["colors"] is None:
-        color_attr["colors"] = [COLOR_BASE] * nbr_n
+        color_attr["colors"] = [COLOR_DEFAULT] * nbr_n
     return color_attr["colors"], color_attr["circle_colors"]
 
 

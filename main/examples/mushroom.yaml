@@ -12,7 +12,7 @@ do:
     - set_random_seed:
         value: 6
     - init_Mesh_from_mesh:
-        filename: /home/Remi.B/Programs/crack/main/examples/mesh/mushroom_22800_quads.mesh
+        filename: /home/remi/Programs/crack/main/examples/mesh/mushroom_22800_quads.mesh
     - init_Graph_from_Mesh:
         ngbr_dim: dual
     - init_NWeights_unit:

@@ -9,7 +9,7 @@ A Partition is a dictionary defining the fields:
 """
 
 
-__author__ = "Remi Barat"
+__author__ = "Rémi Barat"
 __version__ = "1.0"
 
 

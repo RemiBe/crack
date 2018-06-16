@@ -7,7 +7,6 @@ They return a function, of argument 2 vertices, returning if
 the given vertices can be matched together.
 """
 
-
 __author__ = "Rémi Barat"
 __version__ = "1.0"
 
@@ -119,3 +118,5 @@ def restrict_nweights(models, mdata, algopt):
 RESTRICT_FCTS = {
     "nweights": restrict_nweights,
 }
+
+

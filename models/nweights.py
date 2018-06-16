@@ -1,7 +1,7 @@
-"""
+"""Node weights.
 """
 
-__author__ = "Remi Barat"
+__author__ = "Rémi Barat"
 __version__ = "1.0"
 
 

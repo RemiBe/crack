@@ -15,7 +15,7 @@ import random as rd
 from crack.models.models_fcts import CONSTRAINTS_OBJ
 from crack.models.cut         import cut_lambda_minus_one, gain__cut_lambda_minus_one__graph, gain__cut_lambda_minus_one__hypergraph
 from crack.models.eweights    import init_EWeights_unit
-from crack.models.hweights    import init_HWeights_unit
+#from crack.models.hweights    import init_HWeights_unit
 from crack.models.partition   import copy_Partition
 
 
@@ -72,7 +72,7 @@ class GainTableFMCut(object):
         }
         KEYS = {
             "graph"     : ("key_eweights", "eweights", init_EWeights_unit),
-            "hypergraph": ("key_hweights", "hweights", init_HWeights_unit),
+#            "hypergraph": ("key_hweights", "hweights", init_HWeights_unit),
         }
         algopt[GainTableFMCut._KEY_GAIN_FCT] = GAIN_CUT_FCTS[entity]
         algopt[GainTableFMCut._KEY_HEWGTS  ] = KEYS[entity]

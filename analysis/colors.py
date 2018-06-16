@@ -16,7 +16,7 @@ COLOR_DISTINCT = [
     "rgb(255,255,255)", # black  0xffffff
 ]
 
-COLOR_BASE = "rgb(166,189,219)" # light blue
+COLOR_DEFAULT = "rgb(166,189,219)" # light blue
 
 # Should be color-blind friendly;
 # see http://colorbrewer2.org/

@@ -8,7 +8,7 @@ __version__ = "1.0"
 
 from   time import time
 
-from crack.algos.algo_utils import record_algos_stats
+from crack.utils.algo_utils import record_algos_stats
 from crack.models.partition import init_Partition_from_args
 
 

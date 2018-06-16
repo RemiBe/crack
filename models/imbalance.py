@@ -54,13 +54,12 @@ How to compute the igain (gain in imbalance) of a weight?
 
 """
 
-
-__author__ = "Remi Barat"
+__author__ = "Rémi Barat"
 __version__ = "1.0"
 
 
-from crack.utils.errors   import crack_error
 from crack.models.weights import init_Weights_normalized
+from crack.utils.errors   import crack_error
 
 
 def init_even_targets(nbr_p, nbr_c):

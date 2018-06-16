@@ -1,5 +1,9 @@
 TODO
 
+# imbalance
+
+* gain for imbalance (gain__imbalance in models_fcts)
+
 # hypergraph
 
 * coarsen

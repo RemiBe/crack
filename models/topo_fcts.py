@@ -2,11 +2,11 @@
 Hypergraph).
 """
 
-__author__ = "Remi Barat"
+__author__ = "Rémi Barat"
 __version__ = "1.0"
 
 
-from   crack.models.geom_fcts import DIST_FCTS
+from crack.models.geom_fcts import DIST_FCTS
 
 
 def min_dist_nodes(topo):

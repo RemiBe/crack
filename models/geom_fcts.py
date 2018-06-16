@@ -1,7 +1,7 @@
 """Common functions for geometric models (Mesh, GraphGeom).
 """
 
-__author__ = "Remi Barat"
+__author__ = "Rémi Barat"
 __version__ = "1.0"
 
 

@@ -29,9 +29,10 @@ from crack.analysis.analysis_fcts import ANALYZE_FCTS
 from crack.models.models_fcts     import INIT_FCTS, OUTPUT_FCTS
 from crack.operators.coarsen      import COARSEN_FCTS
 from crack.operators.prolong      import PROLONG_FCTS
-from crack.operators.fork         import FORK_FCTS
-from crack.operators.utils        import merge_dicts, eval_expr
-from crack.operators.errors       import crack_error
+from crack.utils.fork             import FORK_FCTS
+from crack.utils.structures       import merge_dicts
+from crack.utils.evaluate         import eval_expr
+from crack.utils.errors           import crack_error
 from crack.utils.algo_utils       import init_algos_stats
 
 

@@ -1,7 +1,7 @@
-"""
+"""Edge weights.
 """
 
-__author__ = "Remi Barat"
+__author__ = "Rémi Barat"
 __version__ = "1.0"
 
 
@@ -12,7 +12,7 @@ from crack.models.weights import condition_models, format_crit
 
 
 #####################################################
-### Format the models for init_NWeights functions ###
+### Format the models for init_EWeights functions ###
 #####################################################
 
 def _init_EWeights(init_fct):

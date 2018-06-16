@@ -14,9 +14,9 @@ import bisect
 import copy   as cp
 from   time   import time
 
-from crack.algos.fm_fcts       import STOP_OUT_FCTS, STOP_INN_FCTS
 from crack.algos.gain_tables.gain_table_cut import GainTableFMCut
 from crack.algos.gain_tables.gain_table_imb import GainTableFMImbalance
+from crack.algos.refine_algos.fm_fcts import STOP_OUT_FCTS, STOP_INN_FCTS
 from crack.operators.iterators import ITER_NODES_FCTS, ITER_PARTS_FCTS
 from crack.utils.errors        import crack_error
 

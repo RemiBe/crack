@@ -3,7 +3,7 @@ structures (Mesh, Graph, Hypergraph, [NE_]Weights, Partition) in a
 common dictionary.
 """
 
-__author__ = "Remi Barat"
+__author__ = "Rémi Barat"
 __version__ = "1.0"
 
 
@@ -14,10 +14,10 @@ from crack.models.partition  import INIT_PARTITION_FCTS
 from crack.models.nweights   import INIT_NWGT_FCTS
 from crack.models.eweights   import INIT_EWGT_FCTS
 
-from crack.models.cut       import cut_lambda_minus_one, gain__cut_lambda_minus_one__graph, gain__cut_lambda_minus_one__hypergraph
-from crack.models.imbalance import ConstraintsImbalance, imbalance, gain__imbalance
+from crack.models.cut        import cut_lambda_minus_one, gain__cut_lambda_minus_one__graph, gain__cut_lambda_minus_one__hypergraph
+from crack.models.imbalance  import ConstraintsImbalance, imbalance
 
-from crack.utils.errors     import crack_error
+from crack.utils.errors      import crack_error
 from crack.utils.structures  import merge_dicts
 
 INIT_FCTS = merge_dicts(
@@ -81,7 +81,8 @@ def get_obj_fcts(models, obj_name, obj_args):
         nwgts = models[obj_args["key_nweights"]]
         parts = models[obj_args["key_partition"]]
         def gain_fct(i, p_src, p_tgt):
-            return gain__imbalance(nwgts, parts, i, p_tgt, stats)
+            pass
+            # TODO return gain__imbalance(nwgts, parts, i, p_tgt, stats)
     if obj_fct is None:
         crack_error(ValueError, "get_gain_fct",
             "Unknown gain function."

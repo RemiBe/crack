@@ -2,6 +2,10 @@
 """
 
 
+__author__ = "Rémi Barat"
+__version__ = "1.0"
+
+
 def merge_dicts(*dicts):
     """Return a dict whose keys are all the keys in the dict given,
     and the values are the value for the last dict given.

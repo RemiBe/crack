@@ -2,8 +2,8 @@
 current time.
 """
 
+__author__ = "Rémi Barat"
 __version__ = "1.0"
-__author__ = "Remi Barat"
 
 
 import datetime   as dt

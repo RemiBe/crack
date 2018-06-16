@@ -52,12 +52,12 @@ Example:
     }
 """
 
-__author__ = "Remi Barat"
+__author__ = "Rémi Barat"
 __version__ = "1.0"
 
 
-from crack.models.nweights  import init_NWeights_from_args
-from crack.models.eweights  import init_EWeights_from_args
+from crack.models.nweights import init_NWeights_from_args
+from crack.models.eweights import init_EWeights_from_args
 
 
 #################################

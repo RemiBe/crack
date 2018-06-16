@@ -19,8 +19,7 @@ NB: Depending on whether the cut is applied on a graph or a hypergraph,
 it will be the classic cut or the lambda-1 cut.
 """
 
-
-__author__ = "Remi Barat"
+__author__ = "Rémi Barat"
 __version__ = "1.0"
 
 
