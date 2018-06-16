@@ -1,0 +1,17 @@
+# yaml
+# Example of the parameters needed by the algorithms
+# (Several sets of parameters can be specified...)
+with:
+    part_params:
+        nbr_p: 2
+        #        msg: True
+        key_topology: graph
+        key_nweights: nweights
+        key_eweights: eweights
+        key_partition_in: partition
+        key_partition_out: partition
+        objective_fct: cut
+        constraints_fct: imbalance
+        constraints_args:
+            tolerance: 0.05
+

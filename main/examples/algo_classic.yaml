@@ -1,0 +1,100 @@
+
+with:
+    keys:
+        key_topology: graph
+        key_nweights: nweights
+        key_eweights: eweights
+        key_partition: partition
+
+phases:
+    print:
+        algo: print_stats
+        args:
+            nbr_n: True
+            imbalance: True
+            cut: True
+            with:
+                keys
+    coarsening:
+        algo: coarsen
+        args:
+            msg: 1
+            aggregate:
+                algo: match_first
+#            order: # TODO
+#                - algo: random
+    refine:
+        algo: fm_part
+        args:
+            msg: 1
+            with: part_params
+            key_topology: graph
+            objective:
+                algo: cut
+            constraints:
+                algo: imbalance
+                args:
+                    tolerance: 0.05
+            select:
+                algo: best_valid
+            break_ties:
+                algo: first
+            stop_inner:
+                algo: negative_gain
+                args:
+                    nbr_moves: 100
+    prolongation:
+        algo: prolong_same_part
+        args:
+            msg: 1
+    end_part:
+        algo: pass
+
+do:
+    - print_stats:
+        nbr_n: True
+#    - plot_Graph:
+#        with: plot_params
+#        colors: nweights
+    - phase : coarsening
+      next  : coarsening
+      alt_0 :
+        phase: random_part
+        conds:
+            - algo: number_of_nodes
+              args:
+                expr: current <= 100
+            - algo: number_of_nodes
+              args:
+                expr: current >= 0.9 * finer
+        expr: 0 or 1
+    - random_part:
+        with: part_params
+    - vn_first_part:
+        with: part_params
+    - print
+#    - plot_Graph:
+#        with: plot_params
+#        colors: nweights
+#        out_file: svg/coarsened_wgts.svg
+#    - plot_Graph:
+#        with: plot_params
+#        colors: partition
+#        out_file: svg/coarsened_parts.svg
+    - phase: refine
+      next : prolongation
+      alt_0:
+        phase: end_part
+        conds:
+            - algo: number_of_nodes
+              args:
+                expr: current == original
+    - phase: prolongation
+      next: refine
+    - end_part
+    - print
+#    - plot_Mesh:
+#        with: plot_params
+#        colors: partition
+#        out_file: svg/final_part.svg
+

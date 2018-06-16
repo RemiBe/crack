@@ -1,0 +1,16 @@
+# yaml
+
+with:
+    plot_params:
+        out_file: svg/mushroom.svg
+        image_size: [950, 500]
+        colors: partition
+        #        edge_strokes: eweights
+
+# Initialize the mesh 'triangle_310' and generates new nweights
+do:
+    - init_Mesh_from_mesh:
+        filename: /home/Remi.B/Programs/crack/main/examples/mesh/mushroom_22800_quads.mesh
+    - init_Graph_from_grf:
+        filename: /home/Remi.B/Programs/crack/main/examples/grf/mushroom_weighted.grf
+

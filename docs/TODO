@@ -26,3 +26,7 @@ TODO
 * order: degree, nwgts_priority
 * restrictions: part
 * matching: balance, big_with_small
+
+# main
+
+* rely on a Petri Net to specify the algorithm.
